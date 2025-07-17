@@ -1,0 +1,40 @@
+# Node modules (if you ever use npm)
+node_modules/
+
+# Dependency directories
+bower_components/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Build output (if you ever use a static site generator)
+dist/
+_build/
+.cache/
+tmp/
+temp/
+
+# Environment files (don’t commit secrets!)
+.env
+.env.*.local
+
+# Misc
+*.bak
+*.tmp
