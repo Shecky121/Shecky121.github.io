@@ -4,64 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SheckNet</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicon -->
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <div class="container">
-	      <h1>SheckNet</h1>
-    <nav>
-  <ul>
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    <div class="brand">
+      <img src="assets/images/favicon.png" alt="SheckNet Icon" class="brand-logo">
+      <h1>SheckNet</h1>
     </div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
       <div class="container">
-        <img src="assets/images/shecknet-logo.png" alt="SheckNet Logo" class="logo">
-		<h2>Welcome to SheckNet</h2>
+        <img src="assets/images/shecknet-logo.png" alt="SheckNet Logo" class="hero-logo">
+        <h2>Welcome to SheckNet!</h2>
         <p>This is my learning project — building a personal website with subdomains and custom email.</p>
-        <a href="#" class="btn">Learn More</a>
       </div>
     </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h3>About SheckNet</h3>
+        <p>
+          SheckNet is a personal project created by me to learn and explore 
+          modern web technologies, DNS management, and secure hosting. 
+        </p>
+        <p>
+          The goal is to build a secure, functional, and well‑designed network of services 
+          — starting with this landing page and expanding over time.
+        </p>
+      </div>
     </section>
-	<section id="about" class="about">
-  <div class="container">
-    <h3>About SheckNet</h3>
-    <p>
-      SheckNet is a personal project created by Shawn Sheckler to learn and explore 
-      modern web technologies, DNS management, and secure hosting. 
-      This site serves as a hub for future projects like VPN access and admin tools, 
-      while also showcasing ongoing development and improvements.
-    </p>
-    <p>
-      The goal is to build a secure, functional, and well‑designed network of services 
-      — starting with this landing page and expanding over time.
-    </p>
-  </div>
-</section>
-<section id="contact" class="contact">
-  <div class="container">
-    <h3>Contact</h3>
-    <p>If you’d like to get in touch, feel free to send me an email:</p>
-    <a href="mailto:shecky12+shecknet@proton.me" class="btn">Email Me</a>
-    <!-- Update the mailto address once your Proton Mail is ready -->
-  </div>
-</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h3>Contact</h3>
+        <p>If you’d like to get in touch, feel free to send me an email:</p>
+        <a href="mailto:shecky@shecknet.com" class="btn">Email Me</a>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 SheckNet. All rights reserved.</p>
     </div>
   </footer>
 
+  <!-- Scroll Shadow Script -->
+  <script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 10) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+  <!-- Optional main.js -->
   <script src="assets/js/main.js"></script>
 </body>
 </html>
