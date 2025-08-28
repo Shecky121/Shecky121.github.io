@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guides · SheckNet</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-26VB1VVLTB');</script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="assets/images/favicon.png" alt="SheckNet Icon" class="brand-logo">
+      <h1>SheckNet</h1>
+    </div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a aria-current="page" href="guides.html">Guides</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="assets/images/shecknet-logo.png" alt="SheckNet Logo" class="hero-logo">
+        <h2>Guides & Cheat Sheets</h2>
+        <p>Short, evergreen references in plain English. No fluff.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <article class="guide">
+          <h3>DNS Records Explained Simply</h3>
+          <p><strong>Goal:</strong> understand the 5 records you’ll actually touch: <em>A, AAAA, CNAME, MX, TXT</em>.</p>
+          <ul>
+            <li><strong>A:</strong> name → IPv4. <code>home.shecknet.com → 203.0.113.5</code></li>
+            <li><strong>AAAA:</strong> name → IPv6. Same idea as A, but IPv6.</li>
+            <li><strong>CNAME:</strong> alias one name to another. <code>www</code> → <code>@</code></li>
+            <li><strong>MX:</strong> which mail server handles your email.</li>
+            <li><strong>TXT:</strong> freeform text (SPF/DKIM/verification).</li>
+          </ul>
+          <p><strong>Rule of thumb:</strong> Use <em>A/AAAA</em> for real endpoints, <em>CNAME</em> for pointers/aliases.</p>
+        </article>
+
+        <article class="guide">
+          <h3>Top 20 Linux Commands I Actually Use</h3>
+          <p>Quick hits you’ll use daily:</p>
+          <pre><code>ls -la     # list details
+cd /path   # move
+pwd        # where am I
+cat file   # view file
+tail -f f  # follow logs
+grep -R "text" .
+find . -name "*.log"
+df -h      # disk space
+du -sh *   # dir sizes
+ps aux     # processes
+top / htop # live view
+systemctl status nginx
+journalctl -u nginx --since "1 hour ago"
+ssh user@host
+scp file user@host:/path
+tar -czf out.tgz folder/
+chmod 644 file; chown user:group file
+curl -I https://shecknet.com
+wget URL
+ip a / ip r  # network</code></pre>
+        </article>
+
+        <article class="guide">
+          <h3>Docker Security Quick Start</h3>
+          <ul>
+            <li>Use minimal base images (e.g., <code>alpine</code>) and pin versions.</li>
+            <li>Run as non-root: <code>USER app</code> in Dockerfile.</li>
+            <li>Don’t bake secrets into images; use env or secret managers.</li>
+            <li>Limit container capabilities (<code>--cap-drop ALL</code>, allow what you need).</li>
+            <li>Scan images regularly (Trivy/Grype) and track CVEs by tag.</li>
+          </ul>
+          <p><em>Starter policy:</em> “No root in containers. No latest tags. Scan before deploy.”</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>&copy; 2025 SheckNet. All rights reserved.</p></div></footer>
+  <script>
+    window.addEventListener('scroll',()=>document.querySelector('header').classList.toggle('scrolled',window.scrollY>10));
+  </script>
+  <script src="assets/js/main.js"></script>
+  
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="shecky12" data-description="Support me on Buy me a coffee!" data-message="Powering homelabs, game dev, and 3D printing — one coffee at a time." data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  
+</body>
+</html>

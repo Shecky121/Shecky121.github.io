@@ -4,7 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SheckNet</title>
-<meta name="robots" content="noindex, nofollow">
+
+  <!-- Keep private for now. Remove when ready for SEO indexing -->
+  <meta name="robots" content="noindex, nofollow">
+
   <!-- Favicon -->
   <link rel="icon" href="assets/images/favicon.png" type="image/png">
 
@@ -13,15 +16,15 @@
 
   <!-- Main CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-26VB1VVLTB');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-26VB1VVLTB');
+  </script>
 </head>
 <body>
   <!-- Header -->
@@ -30,46 +33,63 @@
       <img src="assets/images/favicon.png" alt="SheckNet Icon" class="brand-logo">
       <h1>SheckNet</h1>
     </div>
-    <nav>
+    <nav aria-label="Primary">
       <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="hero" class="hero">
       <div class="container">
         <img src="assets/images/shecknet-logo.png" alt="SheckNet Logo" class="hero-logo">
         <h2>Welcome to SheckNet!</h2>
-        <p>This is my learning project — building a personal website with subdomains and custom email.</p>
+        <p>This is my learning project — a hub for practical, plain-English tech: homelabs, security, game dev, and 3D printing. Pages are under construction — more is coming soon.</p>
+        <p><a class="btn" href="guides.html">Start with Guides</a></p>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- What you'll find -->
+    <section class="about">
       <div class="container">
-        <h3>About SheckNet</h3>
-        <p>
-          SheckNet is a personal project created by me to learn and explore 
-          modern web technologies, DNS management, and secure hosting. 
-        </p>
-        <p>
-          The goal is to build a secure, functional, and well‑designed network of services 
-          — starting with this landing page and expanding over time.
-        </p>
+        <h3>What You’ll Find Here</h3>
+        <ul class="feature-list">
+          <li><strong>Guides & Cheat Sheets:</strong> Evergreen quick references explained simply.</li>
+          <li><strong>Projects & Builds:</strong> Homelab notes, game dev progress, and 3D print experiments.</li>
+          <li><strong>Resources Hub:</strong> Curated links with my notes to save you time.</li>
+          <li><strong>Tools & Downloads (soon):</strong> Checklists, templates, and small utilities.</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Quick links -->
+    <section class="contact">
       <div class="container">
-        <h3>Contact</h3>
-        <p>If you’d like to get in touch, feel free to send me an email:</p>
-        <a href="mailto:shecky@shecknet.com" class="btn">Email Me</a>
+        <h3>Jump In</h3>
+        <div class="grid">
+          <a class="card" href="guides.html">
+            <h4>Guides</h4>
+            <p>Plain-English explainers you can actually use.</p>
+          </a>
+          <a class="card" href="projects.html">
+            <h4>Projects</h4>
+            <p>Homelab, Unreal projects, and printing logs.</p>
+          </a>
+          <a class="card" href="resources.html">
+            <h4>Resources</h4>
+            <p>Best-of-the-web lists + my notes.</p>
+          </a>
+          <a class="card" href="contact.html">
+            <h4>Contact</h4>
+            <p>Say hi or suggest a topic.</p>
+          </a>
+        </div>
       </div>
     </section>
   </main>
@@ -85,15 +105,14 @@
   <script>
     window.addEventListener('scroll', function() {
       const header = document.querySelector('header');
-      if (window.scrollY > 10) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 10);
     });
   </script>
 
   <!-- Optional main.js -->
   <script src="assets/js/main.js"></script>
+  
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="shecky12" data-description="Support me on Buy me a coffee!" data-message="Powering homelabs, game dev, and 3D printing — one coffee at a time." data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  
 </body>
 </html>

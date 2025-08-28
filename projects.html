@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · SheckNet</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-26VB1VVLTB');</script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="assets/images/favicon.png" alt="SheckNet Icon" class="brand-logo">
+      <h1>SheckNet</h1>
+    </div>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a aria-current="page" href="projects.html">Projects</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="assets/images/shecknet-logo.png" alt="SheckNet Logo" class="hero-logo">
+        <h2>Projects & Builds</h2>
+        <p>Snapshots of what I’m building and learning.</p>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container grid">
+       <article class="card">
+          <h3>Homelab Network</h3>
+          <p>Firewalla + Pi-hole + Unifi, Proxmox host for Plex, HA, and services. Goal: low power, quiet, clean segmentation.</p>
+          <ul>
+            <li>VLANs for media, IoT, admin.</li>
+            <li>Proxmox with GPU passthrough for Plex.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>3D Printing Notes</h3>
+          <p>Elegoo Neptune 4 Max with PETG/PLA/TPU tuning. Collecting stable profiles and troubleshooting tips.</p>
+          <ul>
+            <li>Focus: bed adhesion, stringing control, temps.</li>
+            <li>Next: STL workflow and PETG tool parts.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>RB25DET Build Planning</h3>
+          <p>Phased turbo build for an R33 (streetable torque, future headroom). Researching ECU, manifold, and fueling paths.</p>
+          <ul>
+            <li>Phase 1: ~450whp street setup.</li>
+            <li>Phase 2: higher power components staged.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p>&copy; 2025 SheckNet. All rights reserved.</p></div></footer>
+  <script>
+    window.addEventListener('scroll',()=>document.querySelector('header').classList.toggle('scrolled',window.scrollY>10));
+  </script>
+  <script src="assets/js/main.js"></script>
+  
+  <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="shecky12" data-description="Support me on Buy me a coffee!" data-message="Powering homelabs, game dev, and 3D printing — one coffee at a time." data-color="#FF813F" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+  
+</body>
+</html>
