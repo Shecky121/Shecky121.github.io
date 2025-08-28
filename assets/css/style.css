@@ -52,7 +52,7 @@ header {
 }
 header.scrolled { box-shadow: 0 6px 18px var(--shadow); }
 header .brand { display: flex; align-items: center; gap: .6rem; padding: .9rem 0; }
-.brand-logo { width: 28px; height: 28px; border-radius: 6px; }
+.brand-logo { width: 48px; height: 48px; border-radius: 6px; }
 
 nav ul { list-style: none; display: flex; gap: .9rem; padding: 0; margin: 0; }
 nav a {
