@@ -1,0 +1,50 @@
+{
+  "updated": "2025-08-29",
+  "categories": {
+    "3d-printing": [
+      {
+        "title": "Perfect First Layer on Neptune 4 Max",
+        "url": "/guides/3d-printing/perfect-first-layer-neptune4max.html",
+        "summary": "A repeatable Z-offset and leveling workflow for a glassy first layer on the N4 Max.",
+        "date": "2025-08-29",
+        "tags": [
+          "Elegoo",
+          "Z-offset",
+          "Bed Leveling",
+          "Profiles"
+        ],
+        "draft": true
+      }
+    ],
+    "homelab": [
+      {
+        "title": "AWS Config \u2014 7 Queries to Spot Misconfigs Fast",
+        "url": "/guides/homelab/aws-config-7-queries.html",
+        "summary": "Seven paste-ready AWS Config queries to surface common misconfigurations quickly.",
+        "date": "2025-08-29",
+        "tags": [
+          "AWS",
+          "Config",
+          "Queries",
+          "Security"
+        ],
+        "draft": true
+      }
+    ],
+    "game-dev": [
+      {
+        "title": "UE5 Packaging Quickstart (Windows/Android)",
+        "url": "/guides/game-dev/ue5-packaging-quickstart.html",
+        "summary": "Minimal, reliable steps to package UE5 projects for Windows and Android without common pitfalls.",
+        "date": "2025-08-29",
+        "tags": [
+          "UE5",
+          "Builds",
+          "Android",
+          "Windows"
+        ],
+        "draft": true
+      }
+    ]
+  }
+}

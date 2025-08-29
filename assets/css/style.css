@@ -6,19 +6,28 @@
    ============ */
 
 :root {
-  --bg: #0b0f17;
-  --bg-2: #101623;
-  --text: #ecf1ff;
-  --muted: #a8b3cf;
-  --brand: #7cc0ff;
-  --brand-2: #5aa8ff;
-  --card: #121a2a;
-  --border: #1e2a43;
-  --shadow: rgba(0, 0, 0, 0.4);
-}
+  --bg: #ffffff;           /* White background */
+  --bg-2: #f6f7fb;         /* Subtle top-to-bottom gradient stop */
+  --text: #111315;         /* Near-black text */
+  --muted: #6b7280;        /* Gray secondary text */
+  --brand: #dc2626;        /* Red primary */
+  --brand-2: #b91c1c;      /* Deeper red for button gradients */
+  --card: #ffffff;         /* Card surface */
+  --border: #e5e7eb;       /* Light gray borders */
+  --shadow: rgba(2,6,23,.08); /* Softer shadow */
+  --bg-2: #f6f7fb;
+  --stripe-1: #ffffff;   /* white */
+  --stripe-2: #f5f6fa;   /* light gray */
+  --stripe-3: #eceff4;   /* slightly darker gray */
+  --stripe-height: 520px;}
 
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html, body {  background: repeating-linear-gradient(to bottom,
+    var(--stripe-1) 0 calc(var(--stripe-height)),
+    var(--stripe-2) calc(var(--stripe-height)) calc(2*var(--stripe-height)),
+    var(--stripe-3) calc(2*var(--stripe-height)) calc(3*var(--stripe-height))
+  );
+ height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
@@ -45,7 +54,7 @@ p { margin: 0 0 1rem; color: var(--muted); }
 /* Header */
 header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(11, 15, 23, 0.7);
+  background: rgba(255,255,255,.76);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
   transition: box-shadow .2s ease;
@@ -68,7 +77,7 @@ nav a[aria-current="page"], nav a:hover { border-color: var(--brand); color: var
 
 /* Cards */
 .card {
-  background: linear-gradient(180deg, var(--card), #0e1626 120%);
+  background: linear-gradient(180deg, var(--card), #f6f7fb 120%);
   border: 1px solid var(--border);
   border-radius: 16px; padding: 1rem; text-decoration: none; color: var(--text);
   box-shadow: 0 10px 24px -12px var(--shadow);
@@ -80,14 +89,14 @@ nav a[aria-current="page"], nav a:hover { border-color: var(--brand); color: var
 /* Feature/Link lists */
 .feature-list { padding-left: 1.1rem; }
 .link-list { list-style: none; padding: 0; margin: 0; }
-.link-list li { padding: .5rem .75rem; border: 1px dashed var(--border); border-radius: 12px; margin-bottom: .6rem; background: rgba(18,26,42,.35); }
+.link-list li { padding: .5rem .75rem; border: 1px dashed var(--border); border-radius: 12px; margin-bottom: .6rem; background: #f7f8fc; }
 
-.tag { display: inline-block; font-size: .75rem; color: var(--brand); border: 1px solid var(--brand); padding: .1rem .5rem; border-radius: 999px; margin-right: .4rem; }
+.tag { display:inline-block; font-size:.75rem; color:var(--muted); border:1px solid var(--border); padding:.1rem .5rem; border-radius:999px; margin-right:.4rem; background:#fff; }
 
 /* Buttons & inputs */
 .btn {
   display: inline-block; background: linear-gradient(180deg, var(--brand), var(--brand-2));
-  color: #041225; text-decoration: none; font-weight: 700; border: none;
+  color: #ffffff; text-decoration: none; font-weight: 700; border: none;
   padding: .65rem 1rem; border-radius: 999px; cursor: pointer;
   box-shadow: 0 8px 18px -8px var(--shadow);
 }
@@ -95,7 +104,7 @@ nav a[aria-current="page"], nav a:hover { border-color: var(--brand); color: var
 
 input, textarea {
   width: 100%; padding: .65rem .75rem; color: var(--text);
-  background: #0d1422; border: 1px solid var(--border); border-radius: 10px;
+  background: #ffffff; border: 1px solid var(--border); border-radius: 10px;
 }
 label { display: block; margin-bottom: .75rem; }
 
@@ -103,5 +112,116 @@ label { display: block; margin-bottom: .75rem; }
 footer { padding: 2rem 0; border-top: 1px solid var(--border); color: var(--muted); }
 
 /* Code blocks (in Guides) */
-pre { background: #0d1422; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; overflow: auto; }
-code { font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .92rem; }
+pre { background: #ffffff; border: 1px solid var(--border); border-radius: 12px; padding: 1rem; overflow: auto; }
+code { color:#111315; font-family: ui-monospace, "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: .92rem; }
+
+/* =============================
+   Guides Landing (scoped)
+   ============================= */
+.guides-landing :root { /* no-op for scoping; variables come from global :root */ }
+
+.guides-landing .wrap{max-width:1100px; margin-inline:auto; padding:clamp(16px, 3vw, 32px)}
+.guides-landing .section-head{display:flex; flex-direction:column; gap:.5rem; margin: 12px 0 20px}
+.guides-landing .title{font-size:clamp(28px, 4vw, 40px); font-weight:700; letter-spacing:.3px}
+.guides-landing .muted{color:var(--muted)}
+
+/* search */
+.guides-landing .toolbar{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+.guides-landing .search{position:relative; flex: 1 1 340px; max-width:560px}
+.guides-landing .search input{
+  width:100%; background:var(--card); color:var(--text); border:1px solid var(--border); border-radius:999px; padding:12px 44px 12px 44px; outline:none; box-shadow:none;
+}
+.guides-landing .search input:focus{border-color:var(--brand); box-shadow:0 0 0 6px #72d1ff55}
+.guides-landing .search .icon{position:absolute; left:14px; top:50%; transform: translateY(-50%); opacity:.7}
+.guides-landing .search .kbd{position:absolute; right:12px; top:50%; transform: translateY(-50%); font-size:12px; color:var(--muted); background:#f3f4f6; border:1px solid var(--border); border-radius:6px; padding:2px 6px}
+
+/* grid */
+.guides-landing .grid{display:grid; gap:16px; grid-template-columns:repeat(12, 1fr)}
+.guides-landing .col{grid-column: span 12}
+@media (min-width:700px){ .guides-landing .col{grid-column: span 6} }
+@media (min-width:1024px){ .guides-landing .col{grid-column: span 4} }
+
+/* card overrides (use existing .card base, enhance for landing) */
+.guides-landing .card{display:flex; flex-direction:column; gap:12px; background: linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%); border:1px solid var(--border); border-radius:16px; padding:18px; transition: transform .15s ease, border-color .2s ease}
+.guides-landing .card:hover{ transform: translateY(-2px); border-color:#263040 }
+.guides-landing .card .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:12px; color:#c2cad3}
+.guides-landing .badge{font-size:11px; color:#ffffff; background:var(--brand); border-radius:999px; padding:3px 8px; font-weight:700; letter-spacing:.4px}
+.guides-landing .card h2{font-size:22px; margin:4px 0 2px 0}
+.guides-landing .card p{margin:0; color:var(--muted)}
+
+/* footer note */
+.guides-landing .landing-footer{margin: 24px auto; display:flex; justify-content:space-between; align-items:center; color:var(--muted); font-size:14px; width: min(1100px, 92%);}
+.guides-landing .pill{display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background:#f3f4f6; border-radius:999px; padding:8px 12px}
+
+/* =============================
+   Guides Category Pages (article list)
+   ============================= */
+.breadcrumb { color: var(--muted); font-size: .9rem; margin-bottom: .25rem; }
+.breadcrumb a { color: var(--muted); text-decoration: none; border-bottom: 1px dashed transparent; }
+.breadcrumb a:hover { color: var(--brand); border-bottom-color: var(--brand); }
+
+.article-search { margin: 1rem 0 1.25rem; position: relative; }
+.article-search input[type="search"]{
+  width: 100%;
+  background: #ffffff;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem 2.5rem .75rem .85rem;
+}
+.article-search input[type="search"]:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 6px rgba(220,38,38,.20); }
+.article-search::after{
+  content: "⌘K";
+  position: absolute; right: .6rem; top: 50%; transform: translateY(-50%);
+  font-size: .8rem; color: var(--muted);
+  border: 1px solid var(--border); background: #f3f4f6; padding: .1rem .4rem; border-radius: 6px;
+}
+
+.post-list { display: grid; grid-template-columns: 1fr; gap: .9rem; }
+@media (min-width:700px){ .post-list { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width:1024px){ .post-list { grid-template-columns: repeat(3, 1fr); } }
+
+.post-card{
+  background: linear-gradient(180deg, var(--card), #f6f7fb 120%);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  transition: transform .12s ease, border-color .12s ease;
+}
+.post-card:hover{ transform: translateY(-2px); border-color: var(--brand); }
+.post-card h4{ margin: 0 0 .2rem; }
+.post-card p{ margin: 0 0 .4rem; }
+.post-card time{ font-size: .85rem; color: var(--muted); }
+
+.empty-state{ padding: .75rem 0; }
+
+
+/* Tags */
+.tags { display:flex; flex-wrap: wrap; gap: .4rem; margin-top: .4rem; }
+.tag { display:inline-flex; align-items:center; font-size:.75rem; padding:.2rem .5rem; border:1px solid var(--border); border-radius:999px; color:var(--muted); }
+.tag:hover{ border-color: var(--brand); color: var(--text); }
+
+
+/* === Alternating Section Backgrounds ============================== */
+/* Apply to sections inside <main>, skipping .hero */
+main > section:not(.hero){
+  background: var(--stripe-1);
+  padding: 24px 0;  /* breathing room so the background shows */
+}
+
+main > section:nth-of-type(2):not(.hero),
+main > section:nth-of-type(4):not(.hero),
+main > section:nth-of-type(6):not(.hero){
+  background: var(--stripe-2);
+}
+
+main > section:nth-of-type(3):not(.hero),
+main > section:nth-of-type(5):not(.hero),
+main > section:nth-of-type(7):not(.hero){
+  background: var(--stripe-3);
+}
+
+/* Optional subtle divider on alternates */
+main > section:not(.hero) + section:not(.hero){
+  border-top: 1px solid var(--border);
+}

@@ -1,28 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://shecknet.com/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
   </url>
-
-  <url>
-    <loc>https://shecknet.com/guides.html</loc>
-  </url>
-
-  <url>
-    <loc>https://shecknet.com/projects.html</loc>
-  </url>
-
-  <url>
-    <loc>https://shecknet.com/resources.html</loc>
-  </url>
-
   <url>
     <loc>https://shecknet.com/contact.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
   </url>
-
+  <url>
+    <loc>https://shecknet.com/guides-3d-printing.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides-game-dev.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides-homelab.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/3d-printing.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/3d-printing/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/3d-printing/3d-printing-101.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/game-dev.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/game-dev/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/game-dev/first-game-ship-it.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/homelab.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/homelab/</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/guides/homelab/first-homelab.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
   <url>
     <loc>https://shecknet.com/privacy.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
   </url>
-
+  <url>
+    <loc>https://shecknet.com/projects.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://shecknet.com/resources.html</loc>
+    <lastmod>2025-08-29</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
 </urlset>
