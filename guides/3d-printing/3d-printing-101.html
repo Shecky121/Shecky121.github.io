@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -17,6 +20,7 @@
 <!-- Main CSS -->
 <link href="assets/css/style.css" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
+<<<<<<< Updated upstream
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -141,6 +145,312 @@ window.__h82AlnkH6D91__("WyJwdWItNjYyMDA0MDM5NTQwMzY2MyIsW251bGwsbnVsbCxudWxsLCJ
 <div class="container">
 <p>© 2025 SheckNet. All rights reserved. · <a href="privacy.html">Privacy</a></p>
 </div>
+=======
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-26VB1VVLTB');
+</script>
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620040395403663"></script>
+<script async src="https://fundingchoicesmessages.google.com/i/pub-6620040395403663?ers=1"></script>
+<script>(function(){function signalGooglefcPresent(){if(!window.frames['googlefcPresent']){if(document.body){const i=document.createElement('iframe');i.style='width:0;height:0;border:none;z-index:-1000;left:-1000px;top:-1000px;display:none;';i.name='googlefcPresent';document.body.appendChild(i);}else{setTimeout(signalGooglefcPresent,0);}}}signalGooglefcPresent();})();</script>
+<link rel="stylesheet" href="assets/css/overrides.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img alt="SheckNet Icon" class="brand-logo" src="assets/images/favicon.png"/>
+    <h1>SheckNet</h1>
+  </div>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a aria-current="page" href="guides.html">Guides</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="container">
+  <p><a href="/guides.html">Guides</a> › <a href="/guides/3d-printing/index.html">3D Printing</a></p>
+  <h1>3D Printing for Beginners (2025): Printers, Filaments, Slicers, and First Projects</h1>
+  <p><em>Updated 2025-11-12</em></p>
+
+  <nav aria-label="Table of contents" class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#what-is-3dp">What Is 3D Printing?</a></li>
+      <li><a href="#printer-types">Printer Types: FDM vs Resin</a></li>
+      <li><a href="#fdm-architectures">FDM Architectures: Bed-Slinger vs CoreXY</a></li>
+      <li><a href="#components">Key Components That Matter</a></li>
+      <li><a href="#materials">Materials: PLA, PETG, TPU, and More</a></li>
+      <li><a href="#material-quickref">Material Quick-Reference</a></li>
+      <li><a href="#slicers">Slicer Software &amp; Profiles</a></li>
+      <li><a href="#first-projects">Beginner Projects That Teach Core Skills</a></li>
+      <li><a href="#setup-tuning">Setup, Calibration &amp; Tuning</a></li>
+      <li><a href="#troubleshooting">Troubleshooting: Symptoms → Fixes</a></li>
+      <li><a href="#adhesion">Bed Adhesion &amp; Surfaces</a></li>
+      <li><a href="#maintenance-safety">Maintenance &amp; Safety</a></li>
+      <li><a href="#filament-care">Filament Storage &amp; Drying</a></li>
+      <li><a href="#octoprint-homelab">Remote Printing with OctoPrint (Homelab)</a></li>
+      <li><a href="#upgrade-path">Upgrade Path &amp; When to Spend</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+    </ol>
+  </nav>
+
+  <section id="what-is-3dp">
+    <h2>What Is 3D Printing?</h2>
+    <p>3D printing is an additive manufacturing method that builds objects layer by layer from a digital model. At home, most people start with <strong>Fused Deposition Modeling (FDM)</strong> printers and later explore resin machines for ultra-fine detail. The workflow is simple:</p>
+    <ol>
+      <li>Download or design a 3D model (<code>.stl</code>, <code>.3mf</code>).</li>
+      <li>Slice it into G-code with chosen layer heights, speeds, and temperatures.</li>
+      <li>Print, evaluate, and iterate.</li>
+    </ol>
+  </section>
+
+  <section id="printer-types">
+    <h2>Printer Types: Fused Deposition Modeling (FDM) vs Resin</h2>
+    <h3>Fused Deposition Modeling (FDM)</h3>
+    <ul>
+      <li><strong>Pros:</strong> affordable, durable parts, many materials, easy to iterate.</li>
+      <li><strong>Cons:</strong> visible layer lines; benefits from tuning.</li>
+      <li><strong>Best for:</strong> functional prints (brackets, organizers, mounts), cosplay, fixtures, enclosures.</li>
+    </ul>
+    <h3>Resin (MSLA/SLA)</h3>
+    <ul>
+      <li><strong>Pros:</strong> excellent fine detail and smooth surfaces on small parts.</li>
+      <li><strong>Cons:</strong> chemical handling, odors, gloves, wash and cure steps.</li>
+      <li><strong>Best for:</strong> miniatures, dental models, very small intricate parts.</li>
+    </ul>
+  </section>
+
+  <section id="fdm-architectures">
+    <h2>FDM Architectures: Bed-Slinger vs CoreXY</h2>
+    <ul>
+      <li><strong>Bed-Slinger (i3-style):</strong> the bed moves in Y, the toolhead in X/Z. Common, simple, and cost-effective. Larger beds may introduce ringing at high speeds.</li>
+      <li><strong>CoreXY / H-Bot:</strong> stationary bed in Z; light toolhead for faster, cleaner motion. Often quieter and more rigid, with higher top speeds when tuned.</li>
+    </ul>
+  </section>
+
+  <section id="components">
+    <h2>Key Components That Matter</h2>
+    <ul>
+      <li><strong>Extruder:</strong> direct-drive offers better TPU control; Bowden reduces toolhead mass for speed. Both can produce excellent results.</li>
+      <li><strong>Hotend &amp; Nozzle:</strong> brass nozzles are standard; hardened steel for abrasive filaments (carbon fiber, glow). Consider bi-metal heat breaks for stable temps.</li>
+      <li><strong>Bed:</strong> spring steel PEI is convenient; glass is flat and glossy; textured PEI hides first-layer lines.</li>
+      <li><strong>Auto Bed Leveling (ABL):</strong> helps compensate for slight bed tilt/warp. Still tram the gantry mechanically.</li>
+      <li><strong>Motion &amp; Frame:</strong> rigid frames and smooth belts reduce ringing and improve surface finish.</li>
+    </ul>
+  </section>
+
+  <section id="materials">
+    <h2>Materials: PLA, PETG, TPU, and More</h2>
+    <ul>
+      <li><strong>PLA:</strong> easiest material; low warp; great for prototypes, organizers, and decorative parts.</li>
+      <li><strong>PETG:</strong> stronger and more heat-resistant than PLA; ideal for household parts and light outdoor use. Print slightly hotter and slow first layers to avoid elephant’s foot and stringing.</li>
+      <li><strong>TPU (flexible):</strong> requires slow speeds and a constrained filament path. Direct-drive extruders simplify TPU.</li>
+      <li><strong>ASA/ABS:</strong> higher temp and enclosure recommended; better outdoors than PLA; emits fumes—use ventilation.</li>
+      <li><strong>PA/Nylon (and CF blends):</strong> very strong; absorbs moisture quickly; needs high temps, a dry environment, and abrasion-resistant nozzles.</li>
+      <li><strong>PC/Polycarbonate blends:</strong> tough and heat-resistant; benefits from enclosure and high hotend temps.</li>
+    </ul>
+  </section>
+
+  <section id="material-quickref">
+    <h2>Material Quick-Reference</h2>
+    <p><small>Starting points. Adjust for your printer, nozzle, and environment.</small></p>
+    <table aria-label="Material quick reference" class="table">
+      <thead>
+        <tr>
+          <th>Material</th>
+          <th>Nozzle °C</th>
+          <th>Bed °C</th>
+          <th>Fan</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>PLA</td><td>200–215</td><td>55–60</td><td>70–100%</td><td>Minimal enclosure; easy bridging. Avoid hot cars.</td></tr>
+        <tr><td>PETG</td><td>230–245</td><td>70–85</td><td>0–40%</td><td>Reduce fan; slow first layer; increase Z-hop and retraction a bit.</td></tr>
+        <tr><td>TPU</td><td>215–230</td><td>40–60</td><td>10–40%</td><td>Slow speeds (20–35 mm/s). Direct-drive helps.</td></tr>
+        <tr><td>ASA</td><td>240–255</td><td>90–105</td><td>0–10%</td><td>Use enclosure; ventilate. Great UV resistance.</td></tr>
+        <tr><td>Nylon (PA)</td><td>250–270</td><td>70–90</td><td>0–20%</td><td>Keep filament dry; use hardened nozzle for CF-fills.</td></tr>
+        <tr><td>PC/PC-blend</td><td>255–285</td><td>90–110</td><td>0–20%</td><td>Enclosure recommended; slow for layer adhesion.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="slicers">
+    <h2>Slicer Software &amp; Profiles</h2>
+    <p>The slicer converts models into G-code. Good profiles save time and reduce failed prints.</p>
+    <ul>
+      <li><strong>OrcaSlicer:</strong> modern UI, strong supports, Arachne walls, calibration wizards, input shaping on capable machines.</li>
+      <li><strong>PrusaSlicer:</strong> robust and well-documented; wide community support; great variable layer height.</li>
+      <li><strong>Cura:</strong> popular with many plugins and profiles for common printers.</li>
+    </ul>
+    <details><summary>Baseline profile tips</summary>
+      <ul>
+        <li>Layer height: 0.2 mm standard; 0.12 mm for detail; 0.28 mm for speed.</li>
+        <li>Perimeters: 2–3; Infill: 15–25% gyroid or grid for general use.</li>
+        <li>PLA temps: 200–210°C nozzle / 55–60°C bed; PETG: 230–245°C / 70–85°C.</li>
+        <li>Use retraction + small Z-hop on PETG/TPU to reduce stringing and scars.</li>
+        <li>Bridging: slightly lower flow and higher fan for PLA bridges.</li>
+      </ul>
+    </details>
+    <details><summary>Speed management</summary>
+      <ul>
+        <li>Slow the <strong>first layer</strong> (10–25 mm/s) for adhesion.</li>
+        <li>Use lower accelerations and jerk to reduce ringing if your frame is light.</li>
+        <li>Keep external walls slower than infill for surface quality.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="first-projects">
+    <h2>Beginner Projects That Teach Core Skills</h2>
+    <ul>
+      <li><strong>Cable clips / tool holders:</strong> orientation for strength, quick prints to iterate.</li>
+      <li><strong>Phone stand:</strong> overhangs and bridging without supports.</li>
+      <li><strong>Tripod adapter / camera mount:</strong> tolerances and functional threads; test M5/M6 inserts.</li>
+      <li><strong>Bins and labels:</strong> batch printing, uniform tolerances, and nesting.</li>
+      <li><strong>Calibration objects:</strong> flow cube, temperature tower, retraction tower.</li>
+    </ul>
+    <p><em>Roadmap:</em> first layer square → 20 mm calibration cube → temp tower (material) → retraction tower → functional part.</p>
+  </section>
+
+  <section id="setup-tuning">
+    <h2>Setup, Calibration &amp; Tuning</h2>
+    <ol>
+      <li><strong>Mechanical checks:</strong> square the frame; even belt tension; wheels/rails move smoothly; tighten hotend and heatsink screws.</li>
+      <li><strong>Tram and level:</strong> rough-level bed with paper or feeler gauge; run a first-layer test; adjust live-Z until lines are smooth and slightly squished.</li>
+      <li><strong>E-steps &amp; flow:</strong> mark filament and extrude 100 mm; adjust E-steps if off. Fine-tune flow using a single-wall cube to hit target wall thickness.</li>
+      <li><strong>Temperature tower:</strong> print across a range to find a clean, strong temp with minimal stringing.</li>
+      <li><strong>Retraction tuning:</strong> iterative tower; increase retraction distance and speed cautiously; add 0.2–0.3 mm Z-hop if scarring occurs.</li>
+      <li><strong>Speed &amp; input shaping:</strong> if supported, run accelerometer calibration; otherwise reduce acceleration to limit ringing.</li>
+      <li><strong>Cooling balance:</strong> more fan for PLA, less for PETG/ABS/ASA to preserve layer adhesion.</li>
+    </ol>
+  </section>
+
+  <section id="troubleshooting">
+    <h2>Troubleshooting: Symptoms → Fixes</h2>
+    <table aria-label="Troubleshooting table" class="table">
+      <thead>
+        <tr><th>Symptom</th><th>Likely Cause</th><th>Quick Fix</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Poor first layer</td><td>Bed not level; Z-offset off; dirty surface</td><td>Re-tram bed; clean with IPA; slow first layer; raise nozzle temp 5 °C</td></tr>
+        <tr><td>Stringing</td><td>Too hot; low retraction; wet filament</td><td>Lower temp; increase retraction; dry filament; enable combing/avoid crossing perimeters</td></tr>
+        <tr><td>Layer splits</td><td>Low temp; too much fan; drafts</td><td>Raise nozzle temp; reduce fan; enclosure or draft shield</td></tr>
+        <tr><td>Ringing/ghosting</td><td>High accel/jerk; loose belts/frame</td><td>Lower accel; check belt tension; secure printer; input shaping if available</td></tr>
+        <tr><td>Elephant’s foot</td><td>First layer too hot/slow; bed too hot</td><td>Lower bed temp after first layer; add negative “first layer expansion” in slicer</td></tr>
+        <tr><td>Poor bridges</td><td>Too hot; high flow; low fan</td><td>Lower flow for bridges; raise fan for PLA; reduce bridge speed</td></tr>
+        <tr><td>Under-extrusion</td><td>Clog; wrong E-steps/flow; wet filament</td><td>Cold-pull or replace nozzle; recalibrate E-steps/flow; dry filament</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="adhesion">
+    <h2>Bed Adhesion &amp; Surfaces</h2>
+    <ul>
+      <li><strong>PEI spring steel:</strong> clean with IPA; light scuff with fine Scotch-Brite if PLA loses grip.</li>
+      <li><strong>Glue stick/hairspray:</strong> optional release layer for PETG on PEI to avoid fusing.</li>
+      <li><strong>Textured vs smooth:</strong> textured hides first-layer lines; smooth gives glossy bottoms.</li>
+      <li><strong>Brims/rafts:</strong> brim for small contact patches or warp-prone parts; rafts only when necessary.</li>
+    </ul>
+  </section>
+
+  <section id="maintenance-safety">
+    <h2>Maintenance &amp; Safety</h2>
+    <ul>
+      <li><strong>Every 10–20 hours:</strong> wipe and re-lube rails/rods (light machine oil), check belt tension, clean bed.</li>
+      <li><strong>Monthly:</strong> inspect wiring and connectors, verify hotend screws, check fans and filters.</li>
+      <li><strong>Nozzles:</strong> replace when surfaces degrade or extrusion lines look inconsistent.</li>
+      <li><strong>Safety:</strong> place printer on a non-flammable surface; add a smoke detector; avoid unattended prints; ventilate especially for resin/ABS/ASA.</li>
+    </ul>
+  </section>
+
+  <section id="filament-care">
+    <h2>Filament Storage &amp; Drying</h2>
+    <ul>
+      <li>Store spools in sealed bins with fresh desiccant.</li>
+      <li>Dry hygroscopic filaments (PETG, Nylon, TPU) in a <em>safe</em> filament dryer or low-temp oven per manufacturer guidance.</li>
+      <li>Signs of moisture: popping sounds, steam, fuzzy surfaces, stringing.</li>
+    </ul>
+  </section>
+
+  <section id="octoprint-homelab">
+    <h2>Remote Printing with OctoPrint (Homelab)</h2>
+    <p>Install OctoPrint on a small computer or VM and connect the printer via USB. For remote access, use a Virtual Private Network (VPN) such as WireGuard rather than exposing OctoPrint to the internet.</p>
+    <details><summary>Suggested setup flow</summary>
+      <ol>
+        <li>Flash a lightweight OS; install OctoPrint; secure with a strong password and access controls.</li>
+        <li>Add plugins selectively: Bed Level Visualizer, PrintTimeGenius, Firmware Updater.</li>
+        <li>Set up a camera for monitoring; tune timelapse only after core stability is proven.</li>
+        <li>Configure backups to your homelab storage.</li>
+      </ol>
+    </details>
+    <details><summary>VPN notes</summary>
+      <ul>
+        <li>Prefer WireGuard profiles on your router or an edge device. Avoid port forwarding the OctoPrint UI.</li>
+        <li>Use per-device VPN keys and limit access with firewall rules.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="upgrade-path">
+    <h2>Upgrade Path &amp; When to Spend</h2>
+    <ul>
+      <li><strong>High value first:</strong> spring steel PEI plate; quality PLA/PETG; better part cooling duct if needed.</li>
+      <li><strong>Material-driven:</strong> hardened steel or ruby nozzle for abrasive CF-filled filaments.</li>
+      <li><strong>Convenience:</strong> direct-drive for frequent TPU; LED lighting; silent fans.</li>
+      <li><strong>Performance:</strong> input-shaping capable board/firmware when your mechanics are already solid.</li>
+      <li><strong>Enclosure:</strong> for ASA/ABS/PC; also reduces dust and drafts.</li>
+    </ul>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details><summary>Which printer should I buy first?</summary>
+      <p>Start with FDM unless you specifically need resin detail. FDM is cheaper to learn and cleaner for functional parts.</p>
+    </details>
+    <details><summary>My first layer looks rough—what should I do?</summary>
+      <p>Re-level the bed, clean the surface with IPA, slow the first layer, and raise nozzle temperature a few degrees. Check Z-offset live while printing a first-layer test.</p>
+    </details>
+    <details><summary>How fast should I print?</summary>
+      <p>Prioritize quality first. Start with 40–60 mm/s walls and 80–120 mm/s infill, then raise speed as ringing allows. Lower accelerations improve exterior quality.</p>
+    </details>
+    <details><summary>Why do my PETG parts fuse to PEI?</summary>
+      <p>Use a light glue-stick barrier on PEI, lower first-layer bed temp after adhesion, and avoid over-squish on the first layer.</p>
+    </details>
+    <details><summary>Do I need an enclosure?</summary>
+      <p>PLA and PETG do not require one. ASA/ABS/PC benefit from an enclosure to prevent warping and splitting.</p>
+    </details>
+  </section>
+
+  <section id="glossary">
+    <h2>Glossary</h2>
+    <ul>
+      <li><strong>Flow/Extrusion Multiplier:</strong> scales commanded plastic flow; tuned with thin-wall tests.</li>
+      <li><strong>Elephant’s Foot:</strong> flared first layer caused by excess heat/squish.</li>
+      <li><strong>Ringing/Ghosting:</strong> echo patterns after sharp corners; reduced by lower accel/jerk and a rigid frame.</li>
+      <li><strong>Z-Hop:</strong> lifting the nozzle during travel moves to avoid scarring.</li>
+    </ul>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="support"><a href="https://buymeacoffee.com/shecknet" rel="noopener" target="_blank"><img alt="Buy me a coffee" height="41" src="https://cdn.buymeacoffee.com/buttons/default-orange.png" width="174"/></a></div>
+    <p>© 2025 SheckNet. All rights reserved. · <a href="privacy.html">Privacy</a></p>
+  </div>
+>>>>>>> Stashed changes
 </footer>
 </body>
 </html>

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -10,13 +13,17 @@
 <!-- Favicon -->
 <link href="/assets/images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/assets/images/favicon.png" rel="icon" sizes="16x16" type="image/png"/>
+<<<<<<< Updated upstream
 <link href="/assets/images/favicon.png" rel="icon" sizes="32x32" type="image/png"/>
+=======
+>>>>>>> Stashed changes
 <link href="/assets/images/favicon.png" rel="apple-touch-icon"/>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
 <!-- Main CSS -->
 <link href="assets/css/style.css" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
+<<<<<<< Updated upstream
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
@@ -125,6 +132,242 @@ window.__h82AlnkH6D91__("WyJwdWItNjYyMDA0MDM5NTQwMzY2MyIsW251bGwsbnVsbCxudWxsLCJ
 <div class="container">
 <p>© 2025 SheckNet. All rights reserved. · <a href="privacy.html">Privacy</a></p>
 </div>
+=======
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-26VB1VVLTB"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-26VB1VVLTB');
+</script>
+<script async crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620040395403663"></script>
+<script async src="https://fundingchoicesmessages.google.com/i/pub-6620040395403663?ers=1"></script>
+<link rel="stylesheet" href="assets/css/overrides.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <img alt="SheckNet Icon" class="brand-logo" src="assets/images/favicon.png"/>
+    <h1>SheckNet</h1>
+  </div>
+  <nav aria-label="Primary">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a aria-current="page" href="guides.html">Guides</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="container">
+<p><a href="/guides.html">Guides</a> › <a href="/guides/game-dev/index.html">Game Development</a></p>
+<h1>Game Development in 2025: Engines, Workflows, and Launch Playbook</h1>
+<p><em>Updated 2025-11-12</em></p>
+
+<nav aria-label="Table of contents" class="toc">
+<h2>Table of Contents</h2>
+<ol>
+  <li><a href="#choose-engine">Choose an Engine</a></li>
+  <li><a href="#project-setup">Project Setup &amp; Source Control</a></li>
+  <li><a href="#architecture">Architecture &amp; Game Loop Design</a></li>
+  <li><a href="#core-systems">Core Systems: Input, Physics, UI, and Save Data</a></li>
+  <li><a href="#assets-pipeline">Assets Pipeline: Art, Audio, and Versioning</a></li>
+  <li><a href="#optimization">Optimization &amp; Profiling</a></li>
+  <li><a href="#builds-testing">Builds, Testing &amp; QA Process</a></li>
+  <li><a href="#monetization">Monetization &amp; Store Readiness</a></li>
+  <li><a href="#marketing">Marketing, Demos &amp; Community</a></li>
+  <li><a href="#post-launch">Post-Launch Operations</a></li>
+  <li><a href="#faq">FAQ</a></li>
+</ol>
+</nav>
+
+<section id="choose-engine">
+<h2>Choose an Engine</h2>
+<p>The engine defines your workflow, coding style, and publishing process. Pick based on your team size, target platforms, and comfort level with programming.</p>
+<ul>
+  <li><strong>Unreal Engine 5.x:</strong> Industry-standard visuals, strong cross-platform tools, C++ and Blueprints. Excellent for realistic 3D, multiplayer, and console exports. Ideal for medium-to-large teams.</li>
+  <li><strong>Godot 4.x:</strong> Lightweight and open-source. Uses GDScript (Python-like), C#, or C++. Best for 2D, stylized 3D, and small to mid-size indie projects. No royalties or external licensing.</li>
+  <li><strong>Unity 6 (2025 LTS):</strong> Mature ecosystem with wide plugin support. Evaluate runtime fee/licensing terms carefully. Great for mobile and 2.5D games.</li>
+</ul>
+<details><summary>Other engines worth exploring</summary>
+<ul>
+  <li><strong>Defold:</strong> extremely efficient 2D engine with Lua scripting, good for mobile/pixel art titles.</li>
+  <li><strong>GameMaker:</strong> rapid 2D development with a gentle learning curve and built-in scripting.</li>
+  <li><strong>Custom engines:</strong> viable for technical teams or for learning fundamentals of graphics and physics programming.</li>
+</ul>
+</details>
+</section>
+
+<section id="project-setup">
+<h2>Project Setup &amp; Source Control</h2>
+<p>Proper organization prevents chaos once your project grows. Always version-control your work.</p>
+
+<details><summary>Recommended repository structure</summary>
+<pre><code>game/
+├─ Docs/              ← design docs, references, and notes
+├─ Source/            ← scripts, blueprints, code
+├─ Content/           ← textures, models, sounds (tracked with LFS)
+├─ Config/            ← engine configs, project settings
+├─ Builds/            ← output packages (ignored)
+└─ Tools/             ← scripts, automation, utilities
+</code></pre>
+</details>
+
+<ul>
+  <li><strong>Git &amp; LFS:</strong> Use GitHub, GitLab, or Bitbucket with <code>git lfs</code> for large binaries.</li>
+  <li><strong>Branch strategy:</strong> main → develop → feature branches. Require pull request reviews before merging.</li>
+  <li><strong>.gitignore:</strong> exclude build, intermediate, and cache folders. Prevent repo bloat.</li>
+  <li><strong>Automated builds:</strong> implement CI/CD (GitHub Actions, Jenkins, or Unreal’s BuildGraph) to generate nightly builds and run tests.</li>
+</ul>
+</section>
+
+<section id="architecture">
+<h2>Architecture &amp; Game Loop Design</h2>
+<p>Think of your game as modular systems communicating cleanly.</p>
+<ul>
+  <li><strong>Game Loop:</strong> update input → process logic → render frame → repeat. Keep each step lightweight.</li>
+  <li><strong>Separation of Concerns:</strong> divide gameplay, rendering, UI, and save logic into distinct modules.</li>
+  <li><strong>Entity Component Systems (ECS):</strong> popular in modern engines; promotes flexibility and performance.</li>
+  <li><strong>Data-driven design:</strong> use configuration files or JSON to tweak parameters without recompiling.</li>
+</ul>
+</section>
+
+<section id="core-systems">
+<h2>Core Systems: Input, Physics, UI, and Save Data</h2>
+<ul>
+  <li><strong>Input:</strong> abstract controls; map both keyboard/gamepad/touch. Provide rebinding and sensitivity sliders for accessibility.</li>
+  <li><strong>Physics:</strong> stay consistent with units (1m = 1 world unit). Use collision layers and masks to limit checks. Freeze unused axes for 2D motion.</li>
+  <li><strong>User Interface:</strong> keep consistent font scale (16–24px base). Support 16:9 and 19.5:9 safely. Avoid relying on color alone for feedback.</li>
+  <li><strong>Save system:</strong> serialize data to JSON or binary with version numbers for compatibility. Always write to user-accessible directories.</li>
+</ul>
+<details><summary>Example: Save structure</summary>
+<pre><code>{
+  "player": { "level": 5, "xp": 2400, "position": [10, 0, 15] },
+  "inventory": ["key", "potion"],
+  "settings": { "volume": 0.8, "language": "en" }
+}
+</code></pre>
+</details>
+</section>
+
+<section id="assets-pipeline">
+<h2>Assets Pipeline: Art, Audio, and Versioning</h2>
+<p>Your art pipeline determines how quickly assets move from concept to engine. Keep everything standardized.</p>
+<ul>
+  <li><strong>2D Assets:</strong> export at native resolution; use power-of-two texture sizes (512, 1024) for performance.</li>
+  <li><strong>3D Assets:</strong> define uniform units (1 meter = 1 Unreal unit or Godot meter); keep pivot points logical; name materials and meshes clearly.</li>
+  <li><strong>Audio:</strong> normalize all SFX to -1 dB peak / -14 LUFS integrated; separate BGM, SFX, and VO channels; preload short UI sounds into memory.</li>
+  <li><strong>Version control for assets:</strong> commit source files (.blend, .psd) in an “ArtSource” branch, and only export optimized assets to <code>Content</code>.</li>
+</ul>
+<details><summary>Toolchain recommendations</summary>
+<ul>
+  <li><strong>2D:</strong> Krita, Aseprite, Affinity Designer.</li>
+  <li><strong>3D:</strong> Blender, Substance Painter, ArmorPaint.</li>
+  <li><strong>Audio:</strong> Audacity, Reaper, Ocenaudio for mastering.</li>
+</ul>
+</details>
+</section>
+
+<section id="optimization">
+<h2>Optimization &amp; Profiling</h2>
+<ul>
+  <li><strong>Frame timing:</strong> target consistent frame times; measure both CPU and GPU loads.</li>
+  <li><strong>Draw calls:</strong> merge static meshes; use instancing for repeated props.</li>
+  <li><strong>Texture streaming:</strong> keep MIP levels and compression suitable for target platform memory.</li>
+  <li><strong>Profilers:</strong> Unreal Insights, Godot Profiler, RenderDoc, and built-in stat consoles for frame and memory metrics.</li>
+  <li><strong>Physics cost:</strong> disable unnecessary tick updates; consider fixed time steps for deterministic behavior.</li>
+</ul>
+</section>
+
+<section id="builds-testing">
+<h2>Builds, Testing &amp; QA Process</h2>
+<ul>
+  <li><strong>Nightly builds:</strong> automated packaging; perform smoke tests (launch, input, menus, save/load).</li>
+  <li><strong>Unit &amp; integration testing:</strong> automate small logic tests (AI states, inventory rules).</li>
+  <li><strong>Performance benchmarks:</strong> log FPS, memory, and load times automatically to a dashboard or CSV.</li>
+  <li><strong>Telemetry:</strong> opt-in crash reporting; minimal analytics focused on crashes and errors, respecting privacy laws (GDPR/CCPA).</li>
+  <li><strong>Platform testing:</strong> test on all intended hardware — mobile devices, controllers, ultrawide displays, Steam Deck, etc.</li>
+</ul>
+<details><summary>Example CI/CD pipeline steps</summary>
+<ol>
+  <li>Pull latest code → build → run automated tests.</li>
+  <li>Package builds for Windows/macOS/Linux.</li>
+  <li>Deploy artifacts to internal storage or itch.io “restricted” page.</li>
+  <li>Notify testers on Discord or Slack.</li>
+</ol>
+</details>
+</section>
+
+<section id="monetization">
+<h2>Monetization &amp; Store Readiness</h2>
+<ul>
+  <li><strong>Mobile:</strong> integrate latest Google Play Billing Library (v6.0+); implement a “Restore Purchases” button for iOS; use adaptive icons and AAB packaging.</li>
+  <li><strong>Desktop:</strong> prepare store assets (capsule, screenshots, trailer, 120-character tagline). Test achievements and controller mappings.</li>
+  <li><strong>Console:</strong> partner with platform holders early; follow TRC (Technical Requirements Checklist).</li>
+  <li><strong>Ad models:</strong> non-intrusive rewarded ads or optional cosmetics. Avoid pay-to-win loops for long-term retention.</li>
+  <li><strong>Ratings &amp; Privacy:</strong> follow ESRB/PEGI or regional equivalents. Provide privacy labels on mobile stores.</li>
+</ul>
+</section>
+
+<section id="marketing">
+<h2>Marketing, Demos &amp; Community</h2>
+<p>Marketing should begin long before release. Consistency builds trust and momentum.</p>
+<ul>
+  <li><strong>Build a presence:</strong> maintain a simple website (even a single landing page), devlog, and social accounts.</li>
+  <li><strong>Visual consistency:</strong> keep the same logo, palette, and tagline across platforms.</li>
+  <li><strong>Demo / early build:</strong> use Itch.io or Steam demo programs to collect early feedback and player data.</li>
+  <li><strong>Press kit:</strong> create a media-friendly package with screenshots, logo, and description for outreach.</li>
+  <li><strong>Community:</strong> use Discord, Reddit, or Mastodon for updates and bug tracking. Respond openly to feedback.</li>
+</ul>
+</section>
+
+<section id="post-launch">
+<h2>Post-Launch Operations</h2>
+<ul>
+  <li><strong>Patch cadence:</strong> Hotfix within 24–72 hours for critical issues, then move to biweekly/monthly updates.</li>
+  <li><strong>Crash triage:</strong> prioritize top-10 crash signatures; automate log collection.</li>
+  <li><strong>Backups:</strong> store build archives and user-generated content off-site (S3, Backblaze, or NAS).</li>
+  <li><strong>Analytics:</strong> track session length, retention, and feature usage ethically; avoid intrusive data collection.</li>
+  <li><strong>Roadmap:</strong> plan major updates, expansions, or ports; communicate transparently with your player base.</li>
+  <li><strong>Community engagement:</strong> share postmortems, developer insights, and patch notes on every release.</li>
+</ul>
+</section>
+
+<section id="faq">
+<h2>FAQ</h2>
+<details><summary>Which engine is best for a solo developer?</summary>
+<p>Godot is excellent for 2D and small 3D with zero royalties. Unreal is powerful for cinematic 3D or cross-platform console work. Choose based on your strengths and target platforms.</p>
+</details>
+<details><summary>How do I prevent my repository from exploding in size?</summary>
+<p>Use Git LFS for textures, audio, and binaries. Ignore builds and cache folders. Periodically clean up orphaned branches and unused assets.</p>
+</details>
+<details><summary>Should I use paid assets?</summary>
+<p>Yes — selectively. Quality asset packs save time, but always verify licensing for commercial release and modify visuals to maintain a unique style.</p>
+</details>
+<details><summary>How do I know when my game is “done”?</summary>
+<p>When core gameplay is stable, major bugs are fixed, and playtesters consistently have fun. Don’t wait for perfect — ship, then improve.</p>
+</details>
+<details><summary>What’s the most important post-launch metric?</summary>
+<p>Retention. If players return after Day 1, 7, and 30, your core loop works. Optimize around that before adding new content.</p>
+</details>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="support">
+      <a href="https://buymeacoffee.com/shecknet" rel="noopener" target="_blank">
+        <img alt="Buy me a coffee" height="41" src="https://cdn.buymeacoffee.com/buttons/default-orange.png" width="174"/>
+      </a>
+    </div>
+    <p>© 2025 SheckNet. All rights reserved. · <a href="privacy.html">Privacy</a></p>
+  </div>
+>>>>>>> Stashed changes
 </footer>
 </body>
 </html>

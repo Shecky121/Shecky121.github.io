@@ -1,0 +1,25 @@
+
+/* Minimal overrides to eliminate banding and provide a modern neutral palette */
+:root{
+  --bg: #ffffff;
+  --bg-alt: #f7f8fa;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: rgba(2, 6, 23, 0.08);
+}
+
+/* Ensure page background is solid even if old rules slip through */
+html, body {
+  background: var(--bg) !important;
+  background-attachment: scroll !important;
+}
+
+/* Optional alternation: add .alt-sections on a wrapper (e.g., <main class="alt-sections">) */
+.alt-sections > section:nth-of-type(even),
+.alt-sections > .section:nth-of-type(even){
+  background: var(--bg-alt) !important;
+}
+
+.section-divider {
+  border-top: 1px solid var(--border);
+}

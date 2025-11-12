@@ -1,3 +1,4 @@
+try{
 // SheckNet minimal JS
 // - Adds header shadow on scroll (if HTML didn’t already)
 // - Highlights active nav link automatically (robust if you forget aria-current)
@@ -147,3 +148,8 @@
     // leave the empty state in place
   });
 })();
+<<<<<<< Updated upstream
+=======
+
+}catch(e){ console.warn('Manifest disabled; category dashboards hidden.', e); }
+>>>>>>> Stashed changes
