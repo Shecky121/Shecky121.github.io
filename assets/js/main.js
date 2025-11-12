@@ -148,8 +148,5 @@ try{
     // leave the empty state in place
   });
 })();
-<<<<<<< Updated upstream
-=======
 
 }catch(e){ console.warn('Manifest disabled; category dashboards hidden.', e); }
->>>>>>> Stashed changes

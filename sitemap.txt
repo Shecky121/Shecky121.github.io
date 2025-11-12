@@ -1,27 +1,7 @@
-<<<<<<< Updated upstream
-https://shecknet.com/
-https://shecknet.com/contact.html
-https://shecknet.com/guides-3d-printing.html
-https://shecknet.com/guides-game-dev.html
-https://shecknet.com/guides-homelab.html
-=======
 https://shecknet.com/index.html
->>>>>>> Stashed changes
 https://shecknet.com/guides.html
-https://shecknet.com/guides/3d-printing.html
-https://shecknet.com/guides/3d-printing/
-https://shecknet.com/guides/3d-printing/3d-printing-101.html
-https://shecknet.com/guides/game-dev.html
-https://shecknet.com/guides/game-dev/
-https://shecknet.com/guides/game-dev/first-game-ship-it.html
-https://shecknet.com/guides/homelab.html
-https://shecknet.com/guides/homelab/
-https://shecknet.com/guides/homelab/first-homelab.html
-https://shecknet.com/privacy.html
 https://shecknet.com/projects.html
 https://shecknet.com/resources.html
-<<<<<<< Updated upstream
-=======
 https://shecknet.com/contact.html
 https://shecknet.com/guides-3d-printing.html
 https://shecknet.com/guides-game-dev.html
@@ -33,4 +13,3 @@ https://shecknet.com/guides/game-dev/index.html
 https://shecknet.com/guides/homelab/first-homelab.html
 https://shecknet.com/guides/homelab/index.html
 https://shecknet.com/privacy.html
->>>>>>> Stashed changes

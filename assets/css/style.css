@@ -22,18 +22,9 @@
   --stripe-height: 520px;}
 
 * { box-sizing: border-box; }
-<<<<<<< Updated upstream
-html, body {  background: repeating-linear-gradient(to bottom,
-    var(--stripe-1) 0 calc(var(--stripe-height)),
-    var(--stripe-2) calc(var(--stripe-height)) calc(2*var(--stripe-height)),
-    var(--stripe-3) calc(2*var(--stripe-height)) calc(3*var(--stripe-height))
-  );
- height: 100%; }
-=======
 html, body {  /* removed gradient */
  height: 100%;   background: var(--bg, #ffffff);
 }
->>>>>>> Stashed changes
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
@@ -219,21 +210,13 @@ main > section:not(.hero){
 main > section:nth-of-type(2):not(.hero),
 main > section:nth-of-type(4):not(.hero),
 main > section:nth-of-type(6):not(.hero){
-<<<<<<< Updated upstream
-  background: var(--stripe-2);
-=======
   /* removed alternating background */
->>>>>>> Stashed changes
 }
 
 main > section:nth-of-type(3):not(.hero),
 main > section:nth-of-type(5):not(.hero),
 main > section:nth-of-type(7):not(.hero){
-<<<<<<< Updated upstream
-  background: var(--stripe-3);
-=======
   /* removed alternating background */
->>>>>>> Stashed changes
 }
 
 /* Optional subtle divider on alternates */
